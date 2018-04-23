@@ -2,7 +2,7 @@
   "name": "pixi-sdf-text",
   "version": "1.0.0",
   "description": "SDF text rendering for Pixi.js",
-  "main": "../dist/pixi-sdf-text.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Success!\"",
     "start": "webpack -w"
