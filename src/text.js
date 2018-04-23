@@ -38,13 +38,13 @@ export default class Text extends PIXI.mesh.Mesh {
         let opt = {
             text: this._text,
             font: this._font,
-			align: this.align,
-			fontSize: this.fontSize,
-			fill: this.fill,
-			fontWeight: this.fontWeight,
-			width: this.wordWrapWidth,
-			wordWrapWidth: this.wordWrapWidth,
-			lineHeight: this.lineHeight
+			align: this.style.align,
+			fontSize: this.style.fontSize,
+			fill: this.style.fill,
+			fontWeight: this.style.fontWeight,
+			width: this.style.wordWrapWidth,
+			wordWrapWidth: this.style.wordWrapWidth,
+			lineHeight: this.style.lineHeight
         };
 
         if (!opt.font) {
