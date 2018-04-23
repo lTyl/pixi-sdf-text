@@ -22,14 +22,15 @@ export default class Text extends PIXI.mesh.Mesh {
     }
 
     loadAssets() {
-
         loadFont(this.style.fontURL, (err, font) => {
 
             this._font = font;
-            PIXI.loader.add(this.style.imageURL, this.style.imageURL).load((loader, resources) => {
-                this._texture = resources[this.style.imageURL].texture;
-                this.updateText();
-            });
+			if (!PIXI.utils.TextureCache[this.style.imageURL]){
+				PIXI.loader.add(this.style.imageURL, this.style.imageURL).load((loader, resources) => {
+					this._texture = resources[this.style.imageURL].texture;
+					this.updateText();
+				});
+            }
         });
     }
 
